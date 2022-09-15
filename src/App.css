@@ -1,38 +1,115 @@
 .App {
-  text-align: center;
+  color: var(--text-primary);
+  background: radial-gradient(
+    ellipse at center, 
+    var(--bg-gradient1) 0%, 
+    var(--bg-gradient2) 100%   
+  ),
+  repeating-linear-gradient(
+      45deg, transparent,
+      transparent 1px, 
+      var(--bg-gradient2) 7px, 
+      var(--bg-gradient1) 4px
+    );
+  padding: 2em 4em;
+  transition: all 1s!important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a.active {
+  color: var(--accent) !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.box-shadow {
+  box-shadow: 1px 1px 8px var(--shadow);
+}
+.box-shadow:hover {
+  box-shadow: 1px 1px 16px var(--shadow);
+}
+
+.home {
   display: flex;
-  flex-direction: column;
+  justify-content: center!important;
+}
+
+/*---------------------- BUTTONS ------------------------*/
+.btn {
+  padding: .5em !important;
+  color: var(--text-primary)!important;
+  background-color: var(--background)!important;
+  border: 2px var(--accent) solid!important;
+  float: right!important;
+  transition: all 1s!important;
+  z-index: 10 !important;
+  font-weight: 600;
+}
+
+.btn:hover{
+  transform:scale(1.05)!important;
+}
+.theme-button {
+  border-radius: 50%!important;
+}
+.article-button {
+  padding: .5em 1.5em!important;
+}
+
+/*------------------------- NAVBAR -------------------------*/
+.my-nav {
+  background-color: var(--background)!important;
+  color: var(--text-primary)!important;
+  margin: 1em 1em 8vh 1em;
+  padding: 1em;
+  text-align: center;
+  border: 2px solid var(--accent)!important;
+  border-radius: 10px!important;
+  transition: all 1s;
+
+}
+.my-nav h1 {
+  display: inline;
+}
+.my-nav img {
+  width: 75px;
+  height: 75px;
+  transition: all 1s;
+}
+
+.nav-header {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/*------------------------- ARTICLES -----------------------*/
+.articles-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+
+}
+.article-card {
+  background-color: var(--background)!important;
+  width: 30vw;
+  margin: 1em;
+  padding: .5em;
+  border-radius: 10px!important;
+  border: 1px solid var(--accent)!important;
+  transition: all 1s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-img-top {
+  height: 40%!important;
+  border-radius: 10px!important;
+}
+.card-body {
+  display:flex !important;
+  flex-flow: column nowrap !important;
+  justify-content: space-between !important;
+  align-items: center !important;
 }

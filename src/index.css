@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --background: #edf2f4;
+  --text-primary: #2b2d42;
+  --text-secondary: #0077b6;
+  --accent: #ef233c;
+  --shadow: #444;
+  --bg-gradient1: rgba(255, 255, 255, .8);
+  --bg-gradient2: rgba(168, 182, 203, .8);
+}
+[data-theme='dark'] {
+  --background: #2b2d42;
+  --text-primary: #edf2f4;
+  --text-secondary: #2aa3ab;
+  --accent: #e17a00;
+  --shadow: #0c0c10;
+  --bg-gradient1: rgba(0,33,82,.8);
+  --bg-gradient2: rgba(0,0,0,.8);
+}
